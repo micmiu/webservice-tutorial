@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.micmiu.tutorial</groupId>
+  <artifactId>ws-jaxws-demo</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>ws-jaxws-demo</name>
+    <url>http://www.micmiu.com</url>
+    <developers>
+        <developer>
+            <id>Michael</id>
+            <name>Michael Sun</name>
+            <email>sjsky007@gmail.com</email>
+            <url>http://www.micmiu.com</url>
+            <timezone>+8</timezone>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <contributors>
+    </contributors>
+    <organization>
+        <name>Michael Sun</name>
+        <url>http://www.micmiu.com</url>
+    </organization>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <jdk.version>1.6</jdk.version>
+
+        <jaxws-api.version>2.2.8</jaxws-api.version>
+        <jaxws-rt.version>2.2.6-2</jaxws-rt.version>
+        <stax-ex.version>1.7</stax-ex.version>
+        <streambuffer.version>1.5</streambuffer.version>
+        <gmbal-api-only.version>3.2.0-b003</gmbal-api-only.version>
+        <management-api.version>3.1.0-b001</management-api.version>
+        <ws.policy.version>2.3.1</ws.policy.version>
+        <jaxb-impl.version>2.2.5</jaxb-impl.version>
+        <junit.version>4.10</junit.version>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.xml.ws</groupId>
+            <artifactId>jaxws-api</artifactId>
+            <version>${jaxws-api.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>${jaxws-rt.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.gmbal</groupId>
+            <artifactId>gmbal-api-only</artifactId>
+            <version>${gmbal-api-only.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.external</groupId>
+            <artifactId>management-api</artifactId>
+            <version>${management-api.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jvnet.staxex</groupId>
+            <artifactId>stax-ex</artifactId>
+            <version>${stax-ex.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.stream.buffer</groupId>
+            <artifactId>streambuffer</artifactId>
+            <version>${streambuffer.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>policy</artifactId>
+            <version>${ws.policy.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>${jaxb-impl.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+</project>
