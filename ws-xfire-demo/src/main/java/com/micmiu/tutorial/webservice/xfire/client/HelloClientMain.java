@@ -31,7 +31,7 @@ public class HelloClientMain {
 			// Create a client proxy
 			XFireProxyFactory proxyFactory = new XFireProxyFactory();
 			HelloService service = (HelloService) proxyFactory.create(
-					serviceModel, "http://localhost:8083/HelloService");
+					serviceModel, "http://localhost:8084/HelloService");
 
 			System.out.println(" ---->   start webservice client ...");
 			System.out.println(">>>>>   send Michael to server ");

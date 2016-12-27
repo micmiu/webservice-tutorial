@@ -9,7 +9,7 @@
         <relativePath>..</relativePath>
     </parent>
 
-    <artifactId>ws-jaxws-demo</artifactId>
+    <artifactId>ws-jaxws-client</artifactId>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
     <url>http://micmiu.com</url>

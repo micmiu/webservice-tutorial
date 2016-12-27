@@ -20,7 +20,7 @@ import org.codehaus.xfire.service.invoker.ObjectInvoker;
  */
 public class EmbeddedServerStart {
 
-	private static int PORT = 8083;
+	private static int PORT = 8084;
 
 	XFireHttpServer server;
 

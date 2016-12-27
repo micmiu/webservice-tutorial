@@ -1,0 +1,14 @@
+<serviceGroup>
+    <service name="HelloService" scope="application" targetNamespace="http://micmiu.com/">
+        <description>
+            Hello2 Demo Service
+        </description>
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+                             class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+            <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+                             class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.micmiu.tutorial.webservice.axis2.services.impl.HelloServiceImpl</parameter>
+    </service>
+</serviceGroup>
