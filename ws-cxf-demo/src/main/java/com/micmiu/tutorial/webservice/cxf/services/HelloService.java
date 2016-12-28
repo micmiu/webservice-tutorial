@@ -18,8 +18,10 @@ import java.util.List;
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use = SOAPBinding.Use.LITERAL)
 public interface HelloService {
 
+
 	@WebMethod
-	String sayHello(@WebParam(name = "userName") String userName);
+	//指定targetNamespace  否则axis2 ServiceClient方式调用失败
+	String sayHello(@WebParam(name = "userName", targetNamespace = "http://services.cxf.webservice.tutorial.micmiu.com/") String userName);
 
 	@WebMethod
 	List<Blog> queryBlog(@WebParam(name = "author") String author);

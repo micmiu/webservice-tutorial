@@ -18,7 +18,7 @@ public class ServerFactoryServiceRunner {
 		System.out.println("start publish jax-ws ...");
 
 		ServerFactoryBean svrFactory = new ServerFactoryBean();
-		svrFactory.setServiceClass(HelloServiceImpl.class);
+		svrFactory.setServiceClass(HelloService.class);
 		svrFactory.setAddress("http://0.0.0.0:8082/HelloService");
 		svrFactory.setServiceBean(new HelloServiceImpl());
 		svrFactory.create();

@@ -8,6 +8,8 @@ import org.apache.axis2.addressing.EndpointReference;
 import org.apache.axis2.client.Options;
 import org.apache.axis2.client.ServiceClient;
 
+import javax.xml.namespace.QName;
+
 /**
  * Created
  * User: <a href="http://micmiu.com">micmiu</a>
@@ -23,6 +25,9 @@ public class HelloClient {
 
 		url = "http://localhost:8080/ws-axis2-demo/services/HelloService";
 		tns = "http://impl.services.axis2.webservice.tutorial.micmiu.com";
+
+		url = "http://localhost:8082/HelloService";
+		tns = "http://services.cxf.webservice.tutorial.micmiu.com/";
 
 //		url = "http://localhost:8083/HelloService";
 //		tns = "http://services.jaxws.webservice.tutorial.micmiu.com/";
@@ -45,6 +50,8 @@ public class HelloClient {
 			OMElement method = fac.createOMElement("sayHello", omNs);
 
 			OMElement value1 = fac.createOMElement("userName", omNs);
+			//OMElement value1 = fac.createOMElement("arg0", null);
+//			OMElement value1 = fac.createOMElement(new QName(tns,"userName"));
 			value1.addChild(fac.createOMText(value1, "Michael"));
 			method.addChild(value1);
 			System.out.println("method => " + method.toString());

@@ -17,7 +17,7 @@ import java.util.List;
 @WebService(endpointInterface = "com.micmiu.tutorial.webservice.cxf.services.HelloService")
 public class HelloServiceImpl implements HelloService {
 
-	public String sayHello(String userName) {
+	public String sayHello(@WebParam(name = "userName") String userName) {
 		return "Hi " + userName
 				+ ", welcome to www.micmiu.com.";
 	}
