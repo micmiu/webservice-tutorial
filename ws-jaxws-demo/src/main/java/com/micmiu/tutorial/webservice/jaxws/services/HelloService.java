@@ -18,7 +18,7 @@ import java.util.List;
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use = SOAPBinding.Use.LITERAL)
 public interface HelloService {
 
-	@WebMethod
+	@WebMethod(action = "SoapRequest")
 	String sayHello(@WebParam(name = "userName") String userName);
 
 	@WebMethod

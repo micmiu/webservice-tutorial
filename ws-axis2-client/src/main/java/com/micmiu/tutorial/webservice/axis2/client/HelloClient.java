@@ -29,8 +29,8 @@ public class HelloClient {
 		url = "http://localhost:8082/HelloService";
 		tns = "http://services.cxf.webservice.tutorial.micmiu.com/";
 
-//		url = "http://localhost:8083/HelloService";
-//		tns = "http://services.jaxws.webservice.tutorial.micmiu.com/";
+		url = "http://localhost:8083/HelloService";
+		tns = "http://services.jaxws.webservice.tutorial.micmiu.com/";
 
 //		url = "http://localhost:8084/HelloService";
 //		tns = "http://services.xfire.webservice.tutorial.micmiu.com";
@@ -49,7 +49,7 @@ public class HelloClient {
 
 			OMElement method = fac.createOMElement("sayHello", omNs);
 
-			OMElement value1 = fac.createOMElement("userName", omNs);
+			OMElement value1 = fac.createOMElement("userName", null);
 			//OMElement value1 = fac.createOMElement("arg0", null);
 //			OMElement value1 = fac.createOMElement(new QName(tns,"userName"));
 			value1.addChild(fac.createOMText(value1, "Michael"));
