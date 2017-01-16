@@ -7,8 +7,7 @@ import org.apache.axiom.om.OMNamespace;
 import org.apache.axis2.addressing.EndpointReference;
 import org.apache.axis2.client.Options;
 import org.apache.axis2.client.ServiceClient;
-
-import javax.xml.namespace.QName;
+import org.apache.axis2.transport.http.HTTPConstants;
 
 /**
  * Created
@@ -59,6 +58,12 @@ public class HelloClient {
 			Options options = new Options();
 			options.setTo(targetEPR);
 			//options.setTransportInProtocol(Constants.TRANSPORT_HTTP);
+			//老版本设置超时
+//			options.setTimeOutInMilliSeconds(3*1000L);
+			//新版本设置超时
+			options.setProperty(HTTPConstants.SO_TIMEOUT, 3 * 1000);
+			//设置Http客户端连接可以复用
+			//options.setProperty(HTTPConstants.REUSE_HTTP_CLIENT, Boolean.TRUE);
 			ServiceClient sender = new ServiceClient();
 			sender.setOptions(options);
 
